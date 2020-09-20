@@ -1,0 +1,24 @@
+.box{
+  padding-top: 100px 0;
+  text-align: center;
+  background-color: grey;
+  border-style: groove;
+}
+
+.change1{
+    border-style: groove;
+}
+.change2{
+    border-style: groove;
+}
+.change3{
+    border-style: groove;
+}
+
+.weather-box{
+    border: 1px solid black;
+    width:300px;
+    height:100px;
+    margin: 10px 40%;
+}
+

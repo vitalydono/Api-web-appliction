@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta name="description" content="This is an awesome website">
+<title>My weather website</title>
+<link href=" https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<body style="background-color:black;">
+    <div style="height:100vh;" class="weather-body">
+        <div style="margin-left:20%;">
+            <h1 style="font-family:'Modak',cursive; color:white">what is the weather like?</h1>
+        </div>
+         <div class="box">
+            <form action="/" method="POST">
+                <input type="text" name="city" id="city">
+                <input type="submit" value="Add City">
+            </form>
+        {% for weather in weather_data %}
+
+        <div class="weather-box">
+                <img src="http://openweathermap.org/img/w/{{ weather.icon}}.png" alt="image">
+                {{ weather.city}}<br>
+                {{ weather.description}}<br>
+                {{ weather.temperature}} C<br>
+
+
+        </div>
+
+        {% endfor %}
+         </div>
+    </div>
+
+</body>
+{% endblock %}
